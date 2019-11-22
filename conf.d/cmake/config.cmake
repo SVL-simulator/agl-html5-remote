@@ -18,9 +18,17 @@
 
 # Project Info
 # ------------------
-set(PROJECT_NAME "html5-remote")
+if (DEFINED REMOTE_HTML5_NAME)
+  set(PROJECT_NAME ${REMOTE_HTML5_NAME})
+else()
+  set(PROJECT_NAME "remote-html5")
+endif()
 set(PROJECT_PRETTY_NAME "Remote template")
-set(PROJECT_DESCRIPTION "Template for launching remote URL")
+if (DEFINED REMOTE_HTML5_DESCRIPTION)
+  set(PROJECT_DESCRIPTION ${REMOTE_HTML5_DESCRIPTION})
+else()
+  set(PROJECT_DESCRIPTION "Template for launching remote URL")
+endif()
 set(PROJECT_URL "https://webosose.org")
 set(PROJECT_ICON "icon.png")
 set(PROJECT_AUTHOR "Jose Dapena Paz")
@@ -154,7 +162,7 @@ set(WIDGET_TYPE text/html)
 # This is the file that will be executed, loaded,
 # at launch time by the application framework.
 #
-set(WIDGET_ENTRY_POINT https://webosose.org)
+set(WIDGET_ENTRY_POINT htdocs/index.html)
 
 # Optional dependencies order
 # ---------------------------

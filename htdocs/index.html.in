@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>@REMOTE_HTML5_NAME@</title>
+      <meta http-equiv = "refresh" content = "2; url = @REMOTE_HTML5_URL@" />
+   </head>
+   <body>
+     Redirecting...
+   </body>
+</html>
